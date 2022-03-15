@@ -1,1 +1,21 @@
-Hello world
+<p>Hello world</p>
+
+<div>
+    {{title}}
+</div>
+
+<div>
+    The sum of 2 and 2 is {{2+2}
+</div>
+
+<div>
+    The double of 3 is {{duplicateNumber(3)}}
+</div>
+
+<h2>In Theaters</h2>
+
+<app-movies-list [movies]="moviesInTheaters"></app-movies-list>
+
+<h2>Future releases</h2>
+
+<app-movies-list [movies]="moviesFutureReleases"></app-movies-list>
