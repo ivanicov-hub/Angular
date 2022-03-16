@@ -17,6 +17,31 @@ export class AppComponent implements OnInit {
       title: 'Moana',
       releaseDate: new Date(),
       price: 300.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
+    },
+    {
+      title: 'Moana',
+      releaseDate: new Date(),
+      price: 300.99
     }];
 
     this.moviesFutureReleases = [];

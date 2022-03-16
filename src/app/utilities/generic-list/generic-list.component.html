@@ -1,8 +1,3 @@
-<!-- <div *ngIf="!list">
-    <span #loading>
-        <ng-content select="[loading]"></ng-content>
-    </span>
-    <span *ngIf="!loading.innerHTML.trim()"> -->
 <div *ngIf="!list">
     <span #loading>
         <ng-content select="[loading]"></ng-content>
@@ -12,7 +7,6 @@
             src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=82a1493b7dqwzhu216lt02m41hnv35tbo87vbntmpi87g9rg&rid=200w.gif&ct=g" />
     </span>
 </div>
-<!-- </span> -->
 
 <div *ngIf="list?.length === 0">
     <span #empty>
@@ -26,4 +20,3 @@
 <ng-container *ngIf="list && list.length > 0">
     <ng-content select="[content]"></ng-content>
 </ng-container>
-<!-- </div> -->
