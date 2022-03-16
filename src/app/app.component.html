@@ -3,7 +3,7 @@
 <button (click)="uploader.click()">Load file</button> -->
 
 <app-menu></app-menu>
-<app-rating></app-rating>
+<app-rating (onRating)="handleRating($event)"></app-rating>
 
 <!-- <div class="container">
 

@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
   moviesFutureReleases;
   title = 'angular-movies';
 
-  duplicateNumber(num: number) {
-    return num * 2;
+  handleRating(rate: number) {
+    alert(`The user selected ${rate}`)
   }
 }
