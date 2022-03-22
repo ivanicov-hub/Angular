@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-actors-autocomplete',
@@ -23,6 +24,10 @@ export class ActorsAutocompleteComponent implements OnInit {
 
   originalActors = this.actors;
 
+  columnsToDisplay = ['picture', 'name', 'character', 'actions']
+
+  @ViewChild(MatTable) table: MatTable<any>;
+
   ngOnInit(): void {
     this.control.valueChanges.subscribe(value => {
       this.actors = this.originalActors;
@@ -34,6 +39,15 @@ export class ActorsAutocompleteComponent implements OnInit {
     console.log(event.option.value);
     this.selectedActors.push(event.option.value);
     this.control.patchValue('');
+    if (this.table !== undefined) {
+      this.table.renderRows();
+    }
+  }
+
+  remove(actor) {
+    const index = this.selectedActors.findIndex(a => a.name === actor.name);
+    this.selectedActors.splice(index, 1);
+    this.table.renderRows();
   }
 
 }
